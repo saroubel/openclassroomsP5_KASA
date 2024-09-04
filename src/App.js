@@ -1,10 +1,10 @@
 import React from 'react'; 
 import './App.css';
 //importer les pages
-import Home from "./pages/home";
-import About from "./pages/about";
-import Error from "./pages/error";
-import LogementDetail from "./pages/logementDetail";
+import Home from "./pages/Home"; 
+import About from "./pages/About";
+import Error from "./pages/Error";
+import LogementDetail from "./pages/LogementDetail";
 //importer react-router-dom pour les liens de navigation 
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 
