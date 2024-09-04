@@ -1,0 +1,35 @@
+.error_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.error_content .error_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.error_content .error_text {
+    color: #FF6060;
+    text-align: center;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 6%;
+}
+
+.error_content .error_link_home {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}

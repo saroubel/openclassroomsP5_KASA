@@ -1,9 +1,8 @@
 import React from 'react'; 
-import './App.css';
 //importer les pages
 import Home from "./pages/Home"; 
 import About from "./pages/About";
-import Error from "./pages/Error";
+import Error from "./pages/ErrorPage";
 import LogementDetail from "./pages/LogementDetail";
 //importer react-router-dom pour les liens de navigation 
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';

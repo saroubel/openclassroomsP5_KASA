@@ -1,13 +1,15 @@
 import React from "react";
 //On ajoute nos composants
 import Header from "../components/Header";
+import ErrorContent from "../components/Error"; 
 
-function Home() {
+function Error() {
     return (
         <div>
-            <Header />            
+            <Header />
+            <ErrorContent />
         </div>
     );
 }
 
-export default Home;
+export default Error;
