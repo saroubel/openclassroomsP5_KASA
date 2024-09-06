@@ -1,8 +1,9 @@
 import React from "react";
-//On ajoute nos composants
+//Ajout descomposants
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
+//Ajout des images
 import banner_home from "../assets/banner/banner_home.png";
 
 function Home() {
