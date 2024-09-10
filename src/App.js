@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/ErrorPage";
 import LogementDetail from "./pages/LogementDetail";
-//importer react-router-dom pour les liens de navigation 
+//importer les composants pour afficher des différentes pages
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="/accueil" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/logement/:id" element={<LogementDetail />} /> 
-        <Route path="*" element={<Error />} />
+        <Route path="*" element={<Error />} />                           {/* Affiche page erreur si l'url n'est pas dans les routes déclarées*/}
       </Routes>
     </BrowserRouter>
   );

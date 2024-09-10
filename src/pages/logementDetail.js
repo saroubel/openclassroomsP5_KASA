@@ -7,7 +7,7 @@ function LogementDetail() {
     return (
         <div>
             <Header />  
-            {/* <main></main> */}
+            <h1>Logement Detail</h1>
             <Footer />          
         </div>
     );
