@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-function LogementDetail() {
+function LogementPage() {
     return (
         <div>
             <Header />  
@@ -13,4 +13,4 @@ function LogementDetail() {
     );
 }
 
-export default LogementDetail;
+export default LogementPage;
