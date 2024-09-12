@@ -1,9 +1,25 @@
+.logement-details-location {
+    display: flex;
+    flex-direction: column;
+}
+
+.logement-details-host {
+    display: flex;
+    flex-direction: row;
+}
+
+.logement-details {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
 .title-logement {
     color : #FF6060;
     font-size: 36px;
     font-weight: 500;
     margin: 0px;
-    padding-left: 7%;
 }
 
 .location {
@@ -11,5 +27,4 @@
     font-size: 18px;
     font-weight: 500;
     margin: 0px;
-    padding-left: 7%;
 }

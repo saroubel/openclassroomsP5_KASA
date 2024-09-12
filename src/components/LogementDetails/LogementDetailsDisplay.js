@@ -4,6 +4,7 @@ import "../../styles/LogementDetails/LogementsDetailsDisplay.scss";
 // les composants
 import Tags from "./Tags";
 import Carrousel from "./Carrousel";
+import Host from "./Host";
 
 function LogementDetailsDisplay({id}) {
     return (
@@ -12,16 +13,28 @@ function LogementDetailsDisplay({id}) {
             {Logements.map((logement) => (
                 logement.id === id && (
                 <>
-                        {/**Carrousel**/}
-                        <Carrousel pictures={logement.pictures} />
-                        <h2 className="title-logement">{logement.title}</h2>
-                        <p className="location">{logement.location}</p>
+                    {/**Carrousel**/}
+                    <Carrousel pictures={logement.pictures} />
 
-                        {/**Host**/}
-                        {/**Rating**/}
+                    <div className="logement-details">
+                        <div className="logement-details-location">
+                            {/**Titre**/}
+                             <h2 className="title-logement">{logement.title}</h2>
+                            {/**Location**/}
+                            <p className="location">{logement.location}</p>
+                            {/**Tags de chaque logement**/}
+                            <Tags listTags={logement.tags} />
+                        </div>
+                        <div className="logement-details-host">
+                            {/**Host**/}
+                            <Host host={logement.host} />
+                            {/**Rating**/}
+                        </div>
+                    </div>
 
-                        {/**Tags de chaque logement**/}
-                        <Tags listTags={logement.tags} />
+                        
+
+                        
 
                         {/**Description**/}
                         {/**Equipements**/}
