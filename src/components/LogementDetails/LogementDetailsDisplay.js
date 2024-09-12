@@ -5,6 +5,7 @@ import "../../styles/LogementDetails/LogementsDetailsDisplay.scss";
 import Tags from "./Tags";
 import Carrousel from "./Carrousel";
 import Host from "./Host";
+// import Rating from "./Rating";
 
 function LogementDetailsDisplay({id}) {
     return (
@@ -22,22 +23,26 @@ function LogementDetailsDisplay({id}) {
                              <h2 className="title-logement">{logement.title}</h2>
                             {/**Location**/}
                             <p className="location">{logement.location}</p>
-                            {/**Tags de chaque logement**/}
+                            {/**Tags**/}
                             <Tags listTags={logement.tags} />
                         </div>
                         <div className="logement-details-host">
                             {/**Host**/}
                             <Host host={logement.host} />
                             {/**Rating**/}
+                            {/* <Rating rating={logement.rating} /> */}
                         </div>
                     </div>
 
-                        
-
-                        
-
                         {/**Description**/}
+                        <p className="description">{logement.description}</p>
                         {/**Equipements**/}
+                        <p className="equipements">Equipements</p>
+                        <ul className="list-equipements">
+                            {logement.equipments.map((equipment) => (
+                                <li key={equipment}>{equipment}</li>
+                            ))}
+                        </ul>
                 </>
 
             )))}
