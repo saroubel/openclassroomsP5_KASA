@@ -35,14 +35,14 @@ function LogementDetailsDisplay({id}) {
                     </div>
 
                         {/**Description**/}
-                        <p className="description">{logement.description}</p>
+                        {/* <p className="description">{logement.description}</p> */}
                         {/**Equipements**/}
-                        <p className="equipements">Equipements</p>
+                        {/* <p className="equipements">Equipements</p>
                         <ul className="list-equipements">
                             {logement.equipments.map((equipment) => (
                                 <li key={equipment}>{equipment}</li>
                             ))}
-                        </ul>
+                        </ul> */}
                 </>
 
             )))}

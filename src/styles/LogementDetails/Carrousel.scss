@@ -1,4 +1,35 @@
-.carrousel-container {
+.carrousel {
     margin-left: 7%;
     margin-right: 7%;
+}
+
+.carrousel .carrousel-img {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.carrousel .arrow-left {
+    position: absolute;
+    top: 45%;
+    left: 8%;
+}
+
+.carrousel .arrow-right {
+    position: absolute;
+    top: 45%;
+    right: 8%;
+}
+
+.carrousel .carrousel-counter {
+    position: absolute;
+    top: 73%;
+    right: 50%;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
