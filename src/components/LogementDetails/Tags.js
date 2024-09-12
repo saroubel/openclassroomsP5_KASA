@@ -1,11 +1,13 @@
 import React from "react";
-// import "../styles/LogementDetails/Tags.scss";
+import "../../styles/LogementDetails/Tags.scss";
 
-function Tags({ nomTags }) {
+function Tags({ listTags }) {
     return (
-        //map pour afficher listes de tags
         <div className="tag-container">
-            <span className="tag"> {nomTags} </span>
+            {/* OneTag affiche tag par tag */}
+            {listTags.map((oneTag) => (
+            <span className="tag"> {oneTag} </span>             
+            ))}
         </div>
     );
 }
