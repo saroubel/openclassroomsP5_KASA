@@ -43,14 +43,23 @@ function LogementDetailsDisplay({id}) {
                         {/**Description**/}
                         <Collapse className="collapse-description" title="Description" content={logement.description} />
                         {/**Equipements**/}
-                        <Collapse className="collapse-equipments" title="Equipements" content={logement.equipments} />
+                        <Collapse className="collapse-equipments" 
+                                  title="Equipements" 
+                                  content={
+                                    <ul> {logement.equipments.map((oneEquipment, index) => 
+                                           <li key={index}>{oneEquipment}</li>
+                                         )}
+                                    </ul>
+                                  }      
+                        />
                     </div>
 
                 </Fragment>
-
             )))}
         </div>    
     );
 }
+
+
 
 export default LogementDetailsDisplay;

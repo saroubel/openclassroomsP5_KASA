@@ -44,3 +44,19 @@
     font-weight: 400;
 }
 
+.collapse-content p {
+    // padding-left: 10px;
+    padding-bottom: 100px;
+}
+
+//contenu des equipements
+.collapse-content ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 582px;
+    margin: 0px;
+}
+
+

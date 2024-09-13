@@ -24,8 +24,10 @@ function Collapse({ title, content }) {
             </div>
 
             {/*affiche le contenu si la collapse est ouverte */}
-            {isOpen && <p className="collapse-content">{content}</p>}
-
+            {isOpen && 
+                <div className="collapse-content">
+                <p>{content}</p>
+                </div>}
         </div>
     );
 }
