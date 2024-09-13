@@ -6,7 +6,7 @@ function Tags({ listTags }) {
         <div className="tag-container">
             {/* OneTag affiche tag par tag */}
             {listTags.map((oneTag) => (
-            <span className="tag"> {oneTag} </span>             
+            <span key = {oneTag} className="tag"> {oneTag} </span>             
             ))}
         </div>
     );

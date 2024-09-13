@@ -26,6 +26,7 @@ function Carrousel({ pictures }) {
     return (
         <div className="carrousel">
             {/* Image actuelle */}
+            
             <img className="carrousel-img" src={pictures[currentIndex]} alt={pictures[currentIndex]} />
 
             {/* Affichage des chevron de navigation s'il y a plus d'une seule image */}

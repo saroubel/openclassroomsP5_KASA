@@ -1,4 +1,4 @@
-import React from "react"; 
+import React, { Fragment } from "react"; 
 import Logements from "../../data/logements.json";
 import "../../styles/LogementDetails/LogementsDetailsDisplay.scss";
 // les composants
@@ -6,6 +6,7 @@ import Tags from "./Tags";
 import Carrousel from "./Carrousel";
 import Host from "./Host";
 // import Rating from "./Rating";
+import Collapse from "../Collapse.js";
 
 function LogementDetailsDisplay({id}) {
     return (
@@ -13,7 +14,8 @@ function LogementDetailsDisplay({id}) {
             {/* lister les logements */}
             {Logements.map((logement) => (
                 logement.id === id && (
-                <>
+
+                <Fragment key={logement.id}>
                     {/**Carrousel**/}
                     <Carrousel pictures={logement.pictures} />
 
@@ -35,7 +37,7 @@ function LogementDetailsDisplay({id}) {
                     </div>
 
                         {/**Description**/}
-                        {/* <p className="description">{logement.description}</p> */}
+                        <Collapse title="Description" content={logement.description} />
                         {/**Equipements**/}
                         {/* <p className="equipements">Equipements</p>
                         <ul className="list-equipements">
@@ -43,7 +45,7 @@ function LogementDetailsDisplay({id}) {
                                 <li key={equipment}>{equipment}</li>
                             ))}
                         </ul> */}
-                </>
+                </Fragment>
 
             )))}
         </div>    
