@@ -28,3 +28,20 @@
     font-weight: 500;
     margin: 0px;
 }
+
+.collapse-logement {
+    display: flex;
+    flex-direction: row;
+    padding-right: 7%;
+    min-height: 160px;
+}
+
+.collapse-logement .collapse-title {
+    width: 582px;
+}
+
+.collapse-logement .description-collapse {
+    width: 582px;
+    margin-bottom: 10%;
+
+}

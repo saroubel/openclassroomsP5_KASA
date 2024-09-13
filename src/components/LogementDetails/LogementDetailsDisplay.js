@@ -16,9 +16,11 @@ function LogementDetailsDisplay({id}) {
                 logement.id === id && (
 
                 <Fragment key={logement.id}>
+
                     {/**Carrousel**/}
                     <Carrousel pictures={logement.pictures} />
 
+                    {/**Details**/}
                     <div className="logement-details">
                         <div className="logement-details-location">
                             {/**Titre**/}
@@ -36,15 +38,14 @@ function LogementDetailsDisplay({id}) {
                         </div>
                     </div>
 
+                    {/**Collapse**/}
+                    <div className="collapse-logement">
                         {/**Description**/}
-                        <Collapse title="Description" content={logement.description} />
+                        <Collapse className="collapse-description" title="Description" content={logement.description} />
                         {/**Equipements**/}
-                        {/* <p className="equipements">Equipements</p>
-                        <ul className="list-equipements">
-                            {logement.equipments.map((equipment) => (
-                                <li key={equipment}>{equipment}</li>
-                            ))}
-                        </ul> */}
+                        <Collapse className="collapse-equipments" title="Equipements" content={logement.equipments} />
+                    </div>
+
                 </Fragment>
 
             )))}
