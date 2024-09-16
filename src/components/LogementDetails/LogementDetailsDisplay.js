@@ -41,10 +41,9 @@ function LogementDetailsDisplay({id}) {
                     {/**Collapse**/}
                     <div className="collapse-logement">
                         {/**Description**/}
-                        <Collapse className="collapse-description" title="Description" content={logement.description} />
+                        <Collapse title="Description" content={logement.description} />
                         {/**Equipements**/}
-                        <Collapse className="collapse-equipments" 
-                                  title="Equipements" 
+                        <Collapse title="Equipements" 
                                   content={
                                     <ul> {logement.equipments.map((oneEquipment, index) => 
                                            <li key={index}>{oneEquipment}</li>

@@ -14,7 +14,7 @@ function App() {
       <Route path="/" element={<Navigate replace to="/accueil" />} />
         <Route path="/accueil" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/logement/:id" element={<LogementPage />} /> 
+        <Route path="/logement/:id" element={<LogementPage />}/> 
         <Route path="*" element={<Error />} />                           {/* Affiche page erreur si l'url n'est pas dans les routes déclarées*/}
       </Routes>
     </BrowserRouter>

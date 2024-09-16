@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/Collapse.scss";
-// Les images de collapse	
-import ArrowDown from "../assets/collapse/arrow_down.png";
-import ArrowUp from "../assets/collapse/arrow_up.png";
+// import Font Awesomede pour collapse	
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 
 function Collapse({ title, content }) {
@@ -19,8 +19,13 @@ function Collapse({ title, content }) {
         <div className="collapse">
             <div className="collapse-title">
                 <p>{title}</p>
-                {/* image sera down si la collapse est ouverte sinon up */}
-                <img src={isOpen ? ArrowDown : ArrowUp} alt="flèche de collapse"  onClick={() => { display() }}></img>
+                {/* icone sera down si la collapse est ouverte sinon up */}
+                <FontAwesomeIcon 
+                    icon={isOpen ? faChevronDown : faChevronUp } 
+                    onClick={display}
+                    className="collapse-icon"
+                    aria-label="Flèche de collapse"
+                />
             </div>
 
             {/*affiche le contenu si la collapse est ouverte */}
