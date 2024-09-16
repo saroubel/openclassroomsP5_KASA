@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/Collapse.scss";
-// import Font Awesomede pour collapse	
+// import Font Awesome pour collapse	
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 
 
 function Collapse({ title, content }) {

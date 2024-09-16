@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";                       
 import "../../styles/LogementDetails/Carrousel.scss"
-// Les images de slid
-import ArrowLeft from "../../assets/carrousel/arrow_left.png";
-import ArrowRight from "../../assets/carrousel/arrow_right.png";
+// import des icones de Font Awesome pour les carrousel
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 
 function Carrousel({ pictures }) {
@@ -33,13 +33,13 @@ function Carrousel({ pictures }) {
             {totalPictures > 1 && (
                 <div>
                     {/* Bouton pour slid précédent */}
-                    <div onClick={prevSlide} className="carrousel-button">
-                        <img src={ArrowLeft} className="arrow arrow-left" alt =" flèche précedente"/>
+                    <div onClick={prevSlide} className="carrousel-button carrousel-button-left">
+                        <FontAwesomeIcon icon={faChevronLeft} className="arrow" alt =" flèche précedente" />
                     </div>
 
                     {/* Bouton pour slid suivant */}
-                    <div onClick={nextSlide} className="carrousel-button">
-                        <img src={ArrowRight} className="arrow arrow-right" alt = "flèche suivante"/>
+                    <div onClick={nextSlide} className="carrousel-button carrousel-button-right">
+                        <FontAwesomeIcon icon={faChevronRight} className="arrow" alt = "flèche suivante"/>
                     </div>
                 </div>
             )}
