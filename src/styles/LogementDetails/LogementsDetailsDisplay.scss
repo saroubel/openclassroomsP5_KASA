@@ -30,6 +30,7 @@
     margin: 0px;
 }
 
+// collapse
 .collapse-logement {
     display: flex;
     flex-direction: row;
@@ -38,4 +39,10 @@
 
 .collapse-logement .collapse-title {
     width: 582px;
+}
+
+//host & rating
+.logement-details-host {
+    display: flex;
+    flex-direction: column;
 }

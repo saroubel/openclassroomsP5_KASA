@@ -5,7 +5,7 @@ import "../../styles/LogementDetails/LogementsDetailsDisplay.scss";
 import Tags from "./Tags";
 import Carrousel from "./Carrousel";
 import Host from "./Host";
-// import Rating from "./Rating";
+import Rating from "./Rating";
 import Collapse from "../Collapse.js";
 
 function LogementDetailsDisplay({id}) {
@@ -34,7 +34,7 @@ function LogementDetailsDisplay({id}) {
                             {/**Host**/}
                             <Host host={logement.host} />
                             {/**Rating**/}
-                            {/* <Rating rating={logement.rating} /> */}
+                            <Rating rating={logement.rating} />
                         </div>
                     </div>
 
