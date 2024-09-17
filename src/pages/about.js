@@ -13,13 +13,14 @@ function About() {
         <div>
             <Header />
             <Banner image={banner_about}/>
-
+            <main className="about-main" style={{paddingLeft: "10%", paddingRight: "10%"}}>
             {/* Affichage des collapses */}
             {CollapseData.map((collapse) => (                   // on liste les données de collapse depuis fichier json 
                 <Collapse key={collapse.id}                     // Key pour que chaque collapse soit unique
                           title={collapse.title} 
                           content={collapse.content} />
             ))}
+            </main>
             <Footer />
         </div>
     );

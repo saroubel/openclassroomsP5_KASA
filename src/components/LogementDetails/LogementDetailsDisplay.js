@@ -1,6 +1,8 @@
 import React, { Fragment } from "react"; 
 import Logements from "../../data/logements.json";
 import "../../styles/LogementDetails/LogementsDetailsDisplay.scss";
+//navigatgion pour afficher la page erreur
+import { Navigate } from "react-router-dom";
 // les composants
 import Tags from "./Tags";
 import Carrousel from "./Carrousel";
@@ -9,14 +11,17 @@ import Rating from "./Rating";
 import Collapse from "../Collapse.js";
 
 function LogementDetailsDisplay({id}) {
+    
+    //vérification si logement existe sinon redirection vers page erreur
+    const logement = Logements.find((logement) => logement.id === id);
+    if (!logement) {
+        return <Navigate to="/error" replace />
+    }
+
+    //Affichage des logements
     return (
         <div>
-            {/* lister les logements */}
-            {Logements.map((logement) => (
-                logement.id === id && (
-
-                <Fragment key={logement.id}>
-
+                <Fragment>
                     {/**Carrousel**/}
                     <Carrousel pictures={logement.pictures} />
 
@@ -52,9 +57,7 @@ function LogementDetailsDisplay({id}) {
                                   }      
                         />
                     </div>
-
                 </Fragment>
-            )))}
         </div>    
     );
 }
