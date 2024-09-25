@@ -46,8 +46,11 @@ function LogementDetailsDisplay({id}) {
                     {/**Collapse**/}
                     <div className="collapse-logement">
                         {/**Description**/}
+                        <div className="collapse-description">
                         <Collapse title="Description" content={logement.description} />
+                        </div>
                         {/**Equipements**/}
+                        <div className="collapse-equipements">
                         <Collapse title="Equipements" 
                                   content={
                                     <ul> {logement.equipments.map((oneEquipment, index) => 
@@ -56,6 +59,7 @@ function LogementDetailsDisplay({id}) {
                                     </ul>
                                   }      
                         />
+                        </div>
                     </div>
                 </Fragment>
         </div>    

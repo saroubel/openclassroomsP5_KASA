@@ -4,10 +4,11 @@
     justify-content: flex-end;
     width: 340px;
     height: 340px;
-    background-color: #FF6060;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: 30px;
+    animation: fadeInUp 100ms ease-in-out; // Animation d'apparition
+    overflow: hidden; // Empeche le redimensionnement
 }
 
 .card a {
@@ -20,6 +21,11 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 100ms; // Transition de l'image
+}
+
+.card:hover .card_img {
+    transform: scale(1.1); // Agrandir l'image de 10% au survol
 }
 
 .card .card_title {
@@ -27,10 +33,12 @@
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 700;
-    padding-left: 10px;
-    padding-right: 10px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    width: 300px;
+    text-align: left;
+    max-width: 300px;
+    height: 50px;
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

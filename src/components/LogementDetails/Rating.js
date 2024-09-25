@@ -12,7 +12,7 @@ function Rating({rating}) {
         <div className="rating">
             {/*Afficher les etoiles suivant la note*/}
             {/*Si note est inferieur ou égale Rating, affiche étoile remplie, sinon vide */}
-            {notes.map((note) => (
+            {notes.map((note) => ( 
                 note<=rating ?
                 <FontAwesomeIcon 
                     key={note}
