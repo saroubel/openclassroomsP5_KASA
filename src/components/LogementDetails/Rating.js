@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/LogementDetails/Rating.scss";
 // les icones de Font Awesome pour les etoiles
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar} from "@fortawesome/free-solid-svg-icons"; //une étoile remplie

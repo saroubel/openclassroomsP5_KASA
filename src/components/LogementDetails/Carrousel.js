@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";                       
-import "../../styles/LogementDetails/Carrousel.scss"
 // import des icones de Font Awesome pour les carrousel
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";

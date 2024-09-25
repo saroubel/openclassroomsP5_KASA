@@ -1,4 +1,3 @@
-import '../styles/Header.scss';
 import logo from "../assets/logo/logo_header.png";
 import { NavLink, useLocation } from "react-router-dom"; //useLocation pour accéder au chemin actuel
 

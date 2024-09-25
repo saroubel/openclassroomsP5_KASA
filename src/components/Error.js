@@ -1,4 +1,3 @@
-import "../styles/Error.scss";
 import ErrorImg from "../assets/error/404.png";
 import { Link } from "react-router-dom"; //Composant pour les liens de navigation
 

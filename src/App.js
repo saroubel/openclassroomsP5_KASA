@@ -6,6 +6,8 @@ import Error from "./pages/ErrorPage";
 import LogementPage from "./pages/LogementPage";
 //importer les composants pour afficher des différentes pages
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+// importer le style SASS
+import "./App.scss";
 
 function App() {
   return (

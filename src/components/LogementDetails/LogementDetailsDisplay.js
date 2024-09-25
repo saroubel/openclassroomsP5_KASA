@@ -1,6 +1,5 @@
 import React, { Fragment } from "react"; 
 import Logements from "../../data/logements.json";
-import "../../styles/LogementDetails/LogementsDetailsDisplay.scss";
 //navigatgion pour afficher la page erreur
 import { Navigate } from "react-router-dom";
 // les composants

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Gallery.scss';
 import Logements from '../data/logements.json'; //les données de logements depuis fichier json
 import Card from './Card';
 

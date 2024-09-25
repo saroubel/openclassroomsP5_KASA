@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/LogementDetails/Host.scss";
 
 function Host({host}) {
     return (

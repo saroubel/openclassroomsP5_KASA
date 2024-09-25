@@ -14,7 +14,7 @@
 
 // flèches de carrousel
 .carrousel-button-right .arrow{
-    right: 25px;
+    right: 10px;
     position: absolute;
     top: 50%; 
     transform: translateY(-50%); // Ajuste précisément le centrage vertical
@@ -25,7 +25,7 @@
 }
 
 .carrousel-button-left .arrow{
-    left: 25px;
+    left: 10px;
     position: absolute;
     top: 50%; 
     transform: translateY(-50%); 
