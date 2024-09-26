@@ -1,19 +1,15 @@
-.rating {
+.rating { // Conteneur des étoiles
     display: flex; flex-direction: row;
     width: fit-content;
-}
-
-.star-full {
+  }
+  
+  // Mixin star-common pour les styles partagés entre les deux types d'étoiles
+  .star-full {
     color: $text-theme-color;
-    width: 36px; //
-    font-size: larger; //
-}
-
-.star-empty {
+    @include star-common;
+  }
+  
+  .star-empty {
     color: #E3E3E3;
-    width: 36px; //
-    font-size: larger; //
-}
-
-
-
+    @include star-common;
+  }
