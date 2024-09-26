@@ -1,16 +1,16 @@
 .footer {
     display: flex; flex-direction: column; justify-content: center;
     align-items: center; 
+    
     background-color: $footer-background;
-    padding: 0px;
+    padding: $no-padding;
     margin-bottom: 0px;
     margin-top: 4%;
     height: 209px; 
 }
 
 .footer .logo_footer {
-    width: 122px;
-    height: 39.44px;
+    width: 122px; height: 39.44px;
     padding-bottom: 15px;
     margin: 20px;
 }
@@ -20,7 +20,8 @@
     font-family: $font-family-primary;
     font-weight: $font-weight-primary;
     font-size: $size-2;
+
     text-align: center; 
-    margin: 0px;
+    margin: $no-margin;
 }
 

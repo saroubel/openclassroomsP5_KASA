@@ -1,7 +1,6 @@
 .logement-details {
     display: flex; justify-content: space-between;
-    padding-left: 7%;
-    padding-right: 7%;
+    padding-left: 7%; padding-right: 7%;
     padding-top: 1%;
 } 
 
@@ -14,14 +13,14 @@
     font-family: $font-family-primary;
     font-weight: $font-weight-primary;
     font-size: $size-1;
-    margin: 0px; //
+    margin: $no-margin; //
 }
 .location {
     color: $text-color-2;
     font-family: $font-family-primary;
     font-weight: $font-weight-primary;
     font-size: $size-3;
-    margin: 0px; //
+    margin: $no-margin; //
 }
 
 //conteneur host & rating
@@ -33,8 +32,7 @@
 //conteneur collapse equipements & description
 .collapse-logement {
     display: flex; flex-direction: row; justify-content: space-between;
-    margin-right: 7%;
-    margin-left: 7%;
+    margin-right: 7%; margin-left: 7%;
     
 }
 .collapse-logement .collapse-title {
@@ -56,7 +54,7 @@
     display: flex; flex-direction: column; justify-content: flex-start;
     list-style: none;
     width: 582px; //
-    margin: 0px; //
+    margin: $no-margin; //
     padding-left: 15px;
 }
 

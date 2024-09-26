@@ -1,16 +1,16 @@
 // Fichier pour regrouper toutes les variables, mixins, et autres configurations globales
-@import "./settings.scss";
+@import "./settings";
 // composants
-@import "./styles/Banner/Banner.scss";
-@import './styles/Card/Card.scss';
-@import "./styles/Collapse/Collapse.scss";
-@import "./styles/Error/Error.scss";
-@import "./styles/Layout/Footer.scss";
-@import "./styles/Gallery/Gallery.scss";
-@import "./styles/Layout/Header.scss";
+@import "./styles/Banner/Banner";
+@import './styles/Card/Card';
+@import "./styles/Collapse/Collapse";
+@import "./styles/Error/Error";
+@import "./styles/Layout/Footer";
+@import "./styles/Gallery/Gallery";
+@import "./styles/Layout/Header";
 // composants logement
-@import "./styles/LogementDetails/Carrousel.scss";
-@import "./styles/LogementDetails/Host.scss";
-@import "./styles/LogementDetails/Rating.scss";
-@import "./styles/LogementDetails/Tags.scss";
-@import "./styles/LogementDetails/LogementsDetailsDisplay.scss";
+@import "./styles/LogementDetails/Carrousel";
+@import "./styles/LogementDetails/Host";
+@import "./styles/LogementDetails/Rating";
+@import "./styles/LogementDetails/Tags";
+@import "./styles/LogementDetails/LogementsDetailsDisplay";

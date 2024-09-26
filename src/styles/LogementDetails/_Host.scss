@@ -1,7 +1,7 @@
 .host {
     display: flex; flex-direction: row;
     gap : 10px;
-    margin: 0px; //
+    margin: $no-margin; //
     width: 167px; height: 64px; //
 }
 
@@ -10,14 +10,17 @@
     font-family: $font-family-primary;
     font-weight: $font-weight-primary;
     font-size: $size-3;
+
     display: flex; 
     align-items: center; text-align: right;
+
     width: 93px;
-    margin: 0px; //
+    margin: $no-margin; //
 }
 
 .host-picture {
     display: flex;
+    
     width: 64px; height: 64px; //
     border-radius: 50%;
     overflow: hidden;
