@@ -9,10 +9,11 @@
 }
 
 .tag {
-    font-size: 14px;
-    font-weight: 700;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-secondary;
+    font-size: $size-4;
     line-height: 19.96px;
-    background: #FF6060;
+    background: $primary-background;
     color : #FFFFFF;
     border-radius: 10px;
     width: fit-content;

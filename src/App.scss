@@ -1,10 +1,13 @@
-@import "./styles/Banner.scss";
-@import './styles/Card.scss';
-@import "./styles/Collapse.scss";
-@import "./styles/Error.scss";
-@import "./styles/Footer.scss";
-@import "./styles/Gallery.scss";
-@import "./styles/Header.scss";
+// Fichier pour regrouper toutes les variables, mixins, et autres configurations globales
+@import "./settings.scss";
+// composants
+@import "./styles/Banner/Banner.scss";
+@import './styles/Card/Card.scss';
+@import "./styles/Collapse/Collapse.scss";
+@import "./styles/Error/Error.scss";
+@import "./styles/Layout/Footer.scss";
+@import "./styles/Gallery/Gallery.scss";
+@import "./styles/Layout/Header.scss";
 // composants logement
 @import "./styles/LogementDetails/Carrousel.scss";
 @import "./styles/LogementDetails/Host.scss";

@@ -1,6 +1,5 @@
 .logement-details {
-    display: flex;
-    justify-content: space-between;
+    display: flex; justify-content: space-between;
     padding-left: 7%;
     padding-right: 7%;
     padding-top: 1%;
@@ -8,61 +7,57 @@
 
 //conteneur location & tags
 .logement-details-location {
-    display: flex;
-    flex-direction: column;
+    display: flex; flex-direction: column;
 }
 .title-logement {
-    color : #FF6060;
-    font-size: 36px;
-    font-weight: 500;
-    margin: 0px;
+    color : $text-theme-color;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-primary;
+    font-size: $size-1;
+    margin: 0px; //
 }
 .location {
-    color: black;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0px;
+    color: $text-color-2;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-primary;
+    font-size: $size-3;
+    margin: 0px; //
 }
 
 //conteneur host & rating
 .logement-details-host {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
+    display: flex; flex-direction: column; justify-content: space-around;
+    align-items: center;   
 }
 
 //conteneur collapse equipements & description
 .collapse-logement {
-    display: flex;
-    flex-direction: row;
+    display: flex; flex-direction: row; justify-content: space-between;
     margin-right: 7%;
     margin-left: 7%;
-    justify-content: space-between;
+    
 }
 .collapse-logement .collapse-title {
-    width: 582px;
+    width: 582px; //
 }
 
 //contenu de la description
 .collapse-description {
-    width: 582px;
+    width: 582px; //
 }
 
 //contenu des equipements
 .collapse-equipements {
-    width: 582px;
+    width: 582px; //
 }
 
 //contenu des equipements
 .collapse-content ul {
+    display: flex; flex-direction: column; justify-content: flex-start;
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 582px;
-    margin: 0px;
+    width: 582px; //
+    margin: 0px; //
+    padding-left: 15px;
 }
 
 
