@@ -1,42 +1,54 @@
+// Utilisation de Nesting
 .carrousel {
-    position: relative;
-    margin-left: 7%; margin-right: 7%;
-}
+  position: relative;
+  margin-left: 7%; margin-right: 7%;
 
-.carrousel .carrousel-img {
-    width: 100%; height: 415px;
+  .carrousel-img {
+    width: 100%;
+    height: 415px;
     border-radius: $br-large;
     object-fit: cover;
     box-sizing: border-box;
-}
-
-// flèches de carrousel
-.carrousel-button-right .arrow{
-    right: 10px; top: 50%; 
-
-    position: absolute; transform: translateY(-50%); // Ajuste précisément le centrage vertical
-    background: none; border: none; cursor: pointer; padding: 10px;//
-}
-
-.carrousel-button-left .arrow{
-    left: 10px; top: 50%;    
-    position: absolute; transform: translateY(-50%); background: none; border: none; cursor: pointer; padding: 10px; //
-}
-
-.arrow {
-    color: $text-color-1;
-    width: 46.68px; height: 79.2px;
-    display: block; 
-}
-
-// compteur de carrousel
-.carrousel .carrousel-counter {
-    position: absolute; //
-    top: 88%; right: 50%;
+    box-shadow: $dark-shadow;
+  }
+   
+  .carrousel-counter { //compteur de carrousel
+    position: absolute;
+    top: 88%;
+    right: 50%;
     font-weight: $font-weight-primary;
     font-size: $size-3;
     color: $text-color-1;
-
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+// Utilisation de Placeholder Selector pour les boutons de carrousel
+%carrousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+
+  .arrow { // flèches de carrousel
+    color: $text-color-1;
+    width: 46.68px;
+    height: 79.2px;
+    display: block;
+  }
+}
+
+// Utilisation de la directive @extend pour appliquer style du placeholder aux boutons
+.carrousel-button-right {
+  @extend %carrousel-button;
+  right: 10px;
+}
+
+.carrousel-button-left {
+  @extend %carrousel-button;
+  left: 10px;
 }
