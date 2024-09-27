@@ -1,42 +1,47 @@
-.card {
+// Utilisation de Nesting et selecteur parent pour eviter une saisie supplémentaire
+// @include WH-full = Width et Height 100%
+// @include card-dimensions = width et height 340px
+
+.card { // Composant carte
     display: flex; flex-direction: column; justify-content: flex-end;
-    width: 340px;  height: 340px; //
-    border-radius: $br-medium; //
+    @include card-dimensions; 
     margin: 30px;
     animation: fadeInUp 100ms ease-in-out; // Animation d'apparition
-    overflow: hidden; // Empeche le redimensionnement
+    overflow: hidden; // Empêche le redimensionnement
+    border-radius: $br-medium;
     box-shadow: $dark-shadow;
-}
-
-.card a {
-    width: 340px; //
-    height: 340px; //
-}
-
-.card .card_img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    border-radius: $br-medium; //
-    transition: transform 100ms; // Transition de l'image
-}
-
-.card:hover .card_img {
-    transform: scale(1.1); // Agrandir l'image de 10% au survol
-}
-
-.card .card_title {
-    display: flex; justify-content: flex-start;
-    position: absolute;
-    
-    font-family: $font-family-primary;
-    font-weight: $font-weight-secondary;
-    font-size: $size-3;
-    color: $text-color-1;
-    text-align: left;
-    
-    max-width: 300px;
-    height: 50px;
-
-    margin: $no-margin;
-    padding-left: 10px; padding-right: 10px;
-}
+  
+    a { // lien vers la page du logement
+      @include card-dimensions;
+    }
+  
+    &_img { // Image de la carte
+      @include WH-full;
+      border-radius: $br-medium;
+      object-fit: cover;
+      transition: transform 100ms; // Transition de l'image
+    }
+  
+    &:hover &_img { // Agrandissement de l'image à 10% au survol
+      transform: scale(1.1); 
+    }
+  
+    &_title { // Titre de la carte
+      display: flex; justify-content: flex-start;
+      position: absolute;
+      max-width: 300px;
+      height: 50px;
+      color: $text-color-1;
+      text-align: left;
+      font: {
+        family: $font-family-primary;
+        weight: $font-weight-secondary;
+        size: $size-3;
+      }
+      margin: $no-margin;
+      padding: {
+        left: 10px;
+        right: 10px;
+      }
+    }
+  }

@@ -22,18 +22,21 @@
   
     
     &_txt { // texte de la bannière
-      @include WH-full; 
+      width: 100%;
       position: absolute;
-      top: 75%; left: 48%;
+      top: 50%; left: 48%;
       transform: translate(-50%, -50%);
+      display: flex; justify-content: space-evenly;
       color: $text-color-1;
       font: {
         size: 48px;
         family: $font-family-primary;
         weight: $font-weight-secondary;
       }
-      display: flex; justify-content: space-evenly;
-      margin: 30px;
+      margin: {
+        right: 30px;
+        left: 30px;
+      }
     }
 
     
