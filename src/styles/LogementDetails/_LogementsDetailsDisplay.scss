@@ -1,62 +1,72 @@
+// Utilisation selecteur parents pour éviter une saisie suplémentaire
 .logement-details {
     display: flex; justify-content: space-between;
-    padding-left: 7%; padding-right: 7%;
-    padding-top: 1%;
-} 
+    padding: { 
+      left: 7%;
+      right: 7%;
+      top: 1%;
+    }
 
-//conteneur location & tags
-.logement-details-location {
-    display: flex; flex-direction: column;
-}
-.title-logement {
-    color : $text-theme-color;
-    font-family: $font-family-primary;
-    font-weight: $font-weight-primary;
-    font-size: $size-1;
-    margin: $no-margin; //
-}
-.location {
+    &-location { // Conteneur location & tags
+      display: flex; flex-direction: column;
+    }
+
+    &-host { // Conteneur host & rating
+      display: flex; flex-direction: column; justify-content: space-around;
+      align-items: $align;
+    }
+  }
+  
+
+  // Utilisation Nesting pour selecteur hiérarchique
+  .title-logement {
+    margin: $no-margin;
+    color: $text-theme-color;
+    font: {
+      family: $font-family-primary;
+      weight: $font-weight-primary;
+      size: $size-1;
+    } 
+  }
+  
+
+  // Utilisation Nesting pour selecteur hiérarchique
+  .location {
+    margin: $no-margin;
     color: $text-color-2;
-    font-family: $font-family-primary;
-    font-weight: $font-weight-primary;
-    font-size: $size-3;
-    margin: $no-margin; //
-}
+    font: { 
+      family: $font-family-primary;
+      weight: $font-weight-primary;
+      size: $size-3;
+    }
+  }
+  
 
-//conteneur host & rating
-.logement-details-host {
-    display: flex; flex-direction: column; justify-content: space-around;
-    align-items: $align;   
-}
-
-//conteneur collapse equipements & description
-.collapse-logement {
+// Utilisation Nesting d'un selecteur hiérarchique
+.collapse-logement { //conteneur collapse equipements & description
     display: flex; flex-direction: row; justify-content: space-between;
-    margin-right: 7%; margin-left: 7%;
-    
-}
-.collapse-logement .collapse-title {
-    width: 582px; //
-}
+    margin: {
+      right: 7%;
+      left: 7%;
+    }
+  
+    .collapse-title {
+      width: 582px;
+    }
+  }
+  
 
-//contenu de la description
-.collapse-description {
-    width: 582px; //
-}
-
-//contenu des equipements
-.collapse-equipements {
-    width: 582px; //
-}
-
-//contenu des equipements
-.collapse-content ul {
+  // Utilisation regroupement des sélecteurs pour un largeur en commun
+  .collapse-description, 
+  .collapse-equipements, 
+  .collapse-content ul { 
+    width: 582px;
+  }
+  
+  
+  .collapse-content ul { // Contenu des équipements
     display: flex; flex-direction: column; justify-content: flex-start;
     list-style: none;
-    width: 582px; //
-    margin: $no-margin; //
+    margin: $no-margin;
     padding-left: 15px;
-}
-
-
-
+  }
