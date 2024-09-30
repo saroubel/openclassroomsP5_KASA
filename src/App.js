@@ -7,7 +7,7 @@ import LogementPage from "./pages/LogementPage";
 //importer les composants pour afficher des différentes pages
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 // importer le style SASS
-import "./App.scss";
+import "./styles/App.scss";
 
 function App() {
   return (
