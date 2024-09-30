@@ -1,34 +1,32 @@
-.header {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-left: 7%; margin-right: 7%;
-    margin-top: 2%; margin-bottom: 3%;
-    max-height: 68px;
-  
-    .logo_header {
-      width: 210px;
-    }
-  
-    .nav-bar {
-      display: flex;
-      gap: 57px;
-  
-      .nav_home,
-      .nav_about {
-        color: $text-color-2;
-        font-family: $font-family-primary;
-        font-weight: $font-weight-primary;
-        font-size: $size-2;
-        text-decoration: none;
-        
-        &:hover {
-          text-decoration: underline; //
-          color: $text-theme-color; //
-        }
+// Utilisation mixins pour les liens de navigation et alignement espacé
+// Utilisation de nesting pour selecteur hiérarchique
 
-        &.active {
-          text-decoration: underline; //
-          color: $text-theme-color; //
-        }
-      }
+.header {
+  @include flex-space;
+  max-height: 68px;
+  margin: {
+    left: 7%;
+    right: 7%;
+    top: 2%;
+    bottom: 3%;
+  }
+  
+
+  // Logo du header
+  .logo_header {
+    width: 210px;
+    height: auto;
+  }
+
+
+  // Barre de navigation
+  .nav-bar {
+    display: flex;
+    gap: 57px;
+    // Liens de navigation
+    .nav_home,
+    .nav_about { 
+      @include nav-link;
     }
   }
+}

@@ -1,4 +1,4 @@
- // Mixin des étoiles
+// Mixin des étoiles
  @mixin star-common {
     width: 36px;
     font-size: larger;
@@ -14,4 +14,45 @@
   @mixin card-dimensions {
     width: 340px;
     height: 340px;
+  }
+
+// Mixin pour flexation centrer  
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: $align;
+    text-align: center;
+  }
+
+// Mixin pour flexation colonne  
+  @mixin flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: $align;
+    flex-direction: column;
+  }
+
+// Mixin pour flexation espace  
+  @mixin flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: $align;
+  }
+
+// Mixin pour les liens de navigation
+  @mixin nav-link {
+    color: $text-color-2; 
+    font: {
+      family: $font-family-primary;
+      weight: $font-weight-primary;
+      size: $size-2;
+    }
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  
+    &:hover,
+    &.active {
+      text-decoration: underline;
+      color: $text-theme-color;
+    }
   }

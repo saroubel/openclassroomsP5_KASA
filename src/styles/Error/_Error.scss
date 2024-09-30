@@ -1,41 +1,54 @@
-.error_content {
-    display: flex; flex-direction: column; justify-content: center;
-    align-items: center; //
-    margin-left: 7%; margin-right: 7%;
-}
+// Utilisation nesting de selecteur hiérarchique 
+// Utilisation des variables
+// Utilisation mixin pour alignement centre
 
-.error_content .error_text {
-    color: $text-theme-color;
-    font-family: $font-family-primary;
-    font-weight: $font-weight-primary;
-    font-size: $size-1;
+
+  .error_content { // conteneur de l'erreur
+    @include flex-column;
+    margin: {
+      left: 7%;
+      right: 7%;
+    }
+  
     
-    display: flex; justify-content: center; //
-    align-items: center; text-align: center; //
-    margin-bottom: 6%;
-}
-
-.error_content .error_link_home {
-    color: $text-color-2;
-    font-family: $font-family-primary;
-    font-weight: $font-weight-primary;
-    font-size: $size-3;
-
-    display: flex; justify-content: center; //
-    align-items: center; text-align: center; //
-}
-
-.error_content .error_link_home:hover {
-    text-decoration: underline;
-    color: $text-theme-color;
-}
-
-.error_number {
-    color: $text-theme-color;
-    font-family: $font-family-primary;
-    font-weight: $font-weight-secondary;
-    font-size: 288px;
-    display: flex; justify-content: center; //
-    align-items: center; text-align: center; //
-    margin: $no-margin;
-}
+    .error_number { // 404
+      @include flex-center;
+      margin: $no-margin;
+      color: $text-theme-color;
+      font: {
+        family: $font-family-primary;
+        weight: $font-weight-secondary;
+        size: 288px;
+      }
+    }
+  
+    
+    .error_text { // texte d'erreur
+      @include flex-center;
+      margin-bottom: 6%;
+      color: $text-theme-color;
+      font: {
+        family: $font-family-primary;
+        weight: $font-weight-primary;
+        size: $size-1;
+      } 
+    }
+  
+    
+    .error_link_home { // lien vers la page d'accueil
+      @include flex-center;
+      color: $text-color-2;
+      font: {
+        family: $font-family-primary;
+        weight: $font-weight-primary;
+        size: $size-3;
+      }
+      
+  
+      &:hover {
+        text-decoration: underline;
+        color: $text-theme-color;
+      }
+    }
+  }
+  
