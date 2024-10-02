@@ -29,7 +29,7 @@
       display: flex; justify-content: space-evenly;
       color: $text-color-1;
       font: {
-        size: 48px;
+        size: clamp(42px, 1vw, 48px);
         family: $font-family-primary;
         weight: $font-weight-secondary;
       }
@@ -47,4 +47,38 @@
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: $br-large;
     }
-  }
+
+
+    
+    // Version mobile
+    @media screen and (max-width: 768px) {
+      border-radius: $br-medium;
+      height: 111px; 
+      margin: {
+        right: 5%; 
+        left: 5%;
+        bottom: 0px; 
+      }
+
+      &_img {
+        border-radius: $br-medium;
+      }
+      
+      &_txt {
+        font-size: clamp(20px, 1vw, $size-2);
+        margin: {
+          right: 15px; 
+          left: 15px;
+        }
+      } 
+
+      &_dark {
+        border-radius: $br-medium;
+        transform: translate(0%, -103%);
+      } 
+    }
+} 
+
+
+
+

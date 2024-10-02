@@ -23,5 +23,22 @@
       border-radius: 50%;
       overflow: hidden;
     }
+
+
+    // Version mobile
+    @media screen and (max-width: 768px) {
+      width: 135px;
+      height: 32px;
+      justify-content: flex-end;
+
+      &-name {
+        font-size: 12px;
+        width: 70px;
+      }
+
+      &-picture {
+        width: 32px; height: 32px;
+      }
+    }
   }
 

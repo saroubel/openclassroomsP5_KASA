@@ -1,72 +1,114 @@
 // Utilisation selecteur parents pour éviter une saisie suplémentaire
 .logement-details {
-    display: flex; justify-content: space-between;
-    padding: { 
+    @include flex-space;
+    align-items: normal;
+    padding-top: 1%;
+    margin: { 
       left: 7%;
       right: 7%;
-      top: 1%;
     }
-
+    
     &-location { // Conteneur location & tags
       display: flex; flex-direction: column;
     }
-
     &-host { // Conteneur host & rating
-      display: flex; flex-direction: column; justify-content: space-around;
-      align-items: $align;
+      @include flex-column;
+      justify-content: space-around;;
     }
-  }
-  
 
-  // Utilisation Nesting pour selecteur hiérarchique
-  .title-logement {
-    margin: $no-margin;
-    color: $text-theme-color;
-    font: {
-      family: $font-family-primary;
-      weight: $font-weight-primary;
-      size: $size-1;
+    @media screen and (max-width: 768px) {
+      @include flex-column;
+      align-items: normal;
+      margin: {
+        left: 5%;
+        right: 5%;
+      }
+
+      &-host {
+        flex-direction: row-reverse; justify-content: space-between;
+        width: 100%;
+        margin-top: 16px;
+      }
     } 
   }
   
 
-  // Utilisation Nesting pour selecteur hiérarchique
-  .location {
-    margin: $no-margin;
-    color: $text-color-2;
-    font: { 
-      family: $font-family-primary;
-      weight: $font-weight-primary;
-      size: $size-3;
-    }
+
+// Utilisation Nesting pour selecteur hiérarchique
+.title-logement {
+  margin: $no-margin;
+  color: $text-theme-color;
+  font: {
+    family: $font-family-primary;
+    weight: $font-weight-primary;
+    size: $size-1;
+  } 
+  @media screen and (max-width: 768px) {
+    font-size: $size-3;
   }
+}
   
+
+
+// Utilisation Nesting pour selecteur hiérarchique
+.location {
+  margin: $no-margin;
+  color: $text-color-2;
+  font: { 
+    family: $font-family-primary;
+    weight: $font-weight-primary;
+    size: $size-3;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 16px;
+    font-size: $size-4;
+  }
+}
+  
+
 
 // Utilisation Nesting d'un selecteur hiérarchique
 .collapse-logement { //conteneur collapse equipements & description
-    display: flex; flex-direction: row; justify-content: space-between;
+    @include flex-row; justify-content: space-between; flex-wrap: wrap;
     margin: {
       right: 7%;
       left: 7%;
     }
-  
     .collapse-title {
       width: 582px;
     }
+    // Version mobile
+    @media screen and (max-width: 768px) {
+      @include flex-column;
+      margin: {
+        left: 5%;
+        right: 5%;
+      }
+
+      .collapse-title {
+        width: 100%;
+      }
+    }
   }
   
+
 
   // Utilisation regroupement des sélecteurs pour un largeur en commun
   .collapse-description, 
   .collapse-equipements, 
   .collapse-content ul { 
     width: 582px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   
   
+
   .collapse-content ul { // Contenu des équipements
     display: flex; flex-direction: column; justify-content: flex-start;
     list-style: none;
     margin: $no-margin;
-    padding-left: 15px;
+    padding-left: 0;
   }

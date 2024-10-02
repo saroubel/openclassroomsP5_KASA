@@ -1,7 +1,6 @@
 // Utilisation selecteur parents pour éviter une saisie suplémentaire
 .collapse {
     display: flex; flex-direction: column;
-    align-items: $align;
     border-radius: $br-small;
     margin-top: 20px;
   
@@ -47,4 +46,24 @@
         size: $size-3;
       }
     }
+
+
+    // Version mobile 
+  @media screen and (max-width: 768px) {
+    // @include flex-column;
+    &-title {
+      height: 30px;
+      p {
+        font-size: 13px;
+      }
+    }
+
+    &-icon {
+      width: 16px;
+    }
+
+    &-content {
+      font-size: 12px;
+    }
   }
+}

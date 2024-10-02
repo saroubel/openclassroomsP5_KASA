@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Navigate replace to="/accueil" />} />
+        <Route path="/" element={<Navigate replace to="/accueil" />} />
         <Route path="/accueil" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/logement/:id" element={<LogementPage/>} />  {/* Affiche page erreur si logement inexistant*/}

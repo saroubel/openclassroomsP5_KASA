@@ -4,9 +4,17 @@
     flex-wrap: wrap;
     justify-content: center;
     
-    padding: {
-      right: 10%;
-      left: 10%;
-      top: 40px;
+    margin: {
+      right: 7%;
+      left: 7%;
+    }
+
+    // Version mobile
+    @media screen and (max-width: 768px) {
+      @include flex-column;
+      margin: {
+        right: 10%;
+        left: 1%;
+      };
     }
   }

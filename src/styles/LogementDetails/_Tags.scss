@@ -1,11 +1,19 @@
 // Conteneur de tags
 .tag-container {
-  display: flex; flex-direction: row; justify-content: flex-start;
-  align-items: $align;
-  width: 582px;
-  gap: 20px;
+  @include flex-row; 
+  @include flex-wrap;
+  justify-content: flex-start; align-items: $align;
+  // width: 582px;
   margin-top: 20px;
+  row-gap: 5px;
+  column-gap: 15px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 16px;
+  }
 }
+
+
 
 // Utilisation Nesting des propriétés
 .tag {
@@ -26,5 +34,13 @@
   padding: { //remplissage
     left: 15px; 
     right: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 18px;
+    border-radius: $br-small;
+    font-size: 10px;
+    Line-height: 14.26px;
+    
   }
 }
