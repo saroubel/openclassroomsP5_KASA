@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/openclassroomsP5_KASA/static/css/main.3ed6c171.css",
+    "main.js": "/openclassroomsP5_KASA/static/js/main.d993bdb0.js",
+    "static/media/banner_about.png": "/openclassroomsP5_KASA/static/media/banner_about.388a325a41a4341c7ba0.png",
+    "static/media/banner_home.png": "/openclassroomsP5_KASA/static/media/banner_home.7b295fcb71808167cd75.png",
+    "index.html": "/openclassroomsP5_KASA/index.html",
+    "main.3ed6c171.css.map": "/openclassroomsP5_KASA/static/css/main.3ed6c171.css.map",
+    "main.d993bdb0.js.map": "/openclassroomsP5_KASA/static/js/main.d993bdb0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ed6c171.css",
+    "static/js/main.d993bdb0.js"
+  ]
+}
