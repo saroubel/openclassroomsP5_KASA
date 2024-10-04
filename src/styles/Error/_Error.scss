@@ -5,10 +5,8 @@
 
   .error_content { // conteneur de l'erreur
     @include flex-column;
-    margin: {
-      left: 7%;
-      right: 7%;
-    }
+    gap : 40px;
+    margin:7%;
   
     
     .error_number { // 404
@@ -48,6 +46,25 @@
       &:hover {
         text-decoration: underline;
         color: $text-theme-color;
+      }
+    }
+
+
+
+    // Version mobile
+    @media screen and (max-width: 768px) {
+      .error_number {
+        font: {
+          font-weight: $font-weight-secondary;
+          size: 96px;
+        }      
+      }
+      .error_text {
+        width: 260px;
+        font-size: $size-3;
+      }
+      .error_link_home {
+        font-size: $size-4;
       }
     }
   }

@@ -2,7 +2,7 @@
 .collapse {
     display: flex; flex-direction: column;
     border-radius: $br-small;
-    margin-top: 20px;
+    margin-top: 25px;
   
 
     &-title { // conteneur de titre
@@ -50,7 +50,7 @@
 
     // Version mobile 
   @media screen and (max-width: 768px) {
-    // @include flex-column;
+    margin-top: 20px;
     &-title {
       height: 30px;
       p {

@@ -11,8 +11,8 @@ function Home() {
     return (
         <div>
             <Header />  
-            <Banner image={banner_home} texte="Chez vous, partout et ailleurs" />
-            <Gallery />
+            <Banner image={banner_home} texte= {<>Chez vous, <span>partout et ailleurs</span></>} />
+            <Gallery /> 
             <Footer />          
         </div>
     );

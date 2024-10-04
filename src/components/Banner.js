@@ -5,9 +5,9 @@ function Banner ({ image, texte }) {
     <div className="banner">
       <img className="banner_img" src={image} alt="Bannière" />
       <div className="banner_dark"></div>
-      <span className="banner_txt">{texte}</span>
+      <h1 className="banner_txt">{texte}</h1>
     </div>
-  );
+  )
 }
 
 export default Banner;

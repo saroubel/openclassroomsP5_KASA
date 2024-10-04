@@ -3,13 +3,12 @@
   @include flex-row; 
   @include flex-wrap;
   justify-content: flex-start; align-items: $align;
-  // width: 582px;
-  margin-top: 20px;
   row-gap: 5px;
   column-gap: 15px;
+  margin-top: 15px;
 
   @media screen and (max-width: 768px) {
-    margin-top: 16px;
+    margin-top: 10px;
   }
 }
 
@@ -41,6 +40,5 @@
     border-radius: $br-small;
     font-size: 10px;
     Line-height: 14.26px;
-    
   }
 }

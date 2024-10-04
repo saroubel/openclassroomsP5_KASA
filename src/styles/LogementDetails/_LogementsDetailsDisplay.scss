@@ -13,7 +13,7 @@
     }
     &-host { // Conteneur host & rating
       @include flex-column;
-      justify-content: space-around;;
+      justify-content: space-between;
     }
 
     @media screen and (max-width: 768px) {
@@ -27,7 +27,7 @@
       &-host {
         flex-direction: row-reverse; justify-content: space-between;
         width: 100%;
-        margin-top: 16px;
+        margin-top: 10px;
       }
     } 
   }
@@ -45,6 +45,7 @@
   } 
   @media screen and (max-width: 768px) {
     font-size: $size-3;
+    margin-top: 10px;
   }
 }
   
@@ -53,6 +54,7 @@
 // Utilisation Nesting pour selecteur hiérarchique
 .location {
   margin: $no-margin;
+  margin-top: 10px;
   color: $text-color-2;
   font: { 
     family: $font-family-primary;
@@ -60,7 +62,7 @@
     size: $size-3;
   }
   @media screen and (max-width: 768px) {
-    margin-top: 16px;
+    margin-top: 10px;
     font-size: $size-4;
   }
 }
@@ -69,17 +71,21 @@
 
 // Utilisation Nesting d'un selecteur hiérarchique
 .collapse-logement { //conteneur collapse equipements & description
-    @include flex-row; justify-content: space-between; flex-wrap: wrap;
+    @include flex-row; 
+    gap: 70px;
     margin: {
       right: 7%;
       left: 7%;
     }
     .collapse-title {
-      width: 582px;
+      width: 100%;
+      max-width: 1024px;
+      border-radius: 10px;
     }
     // Version mobile
     @media screen and (max-width: 768px) {
       @include flex-column;
+      gap: 0px;
       margin: {
         left: 5%;
         right: 5%;
@@ -87,6 +93,7 @@
 
       .collapse-title {
         width: 100%;
+        border-radius: 5px;
       }
     }
   }
@@ -97,7 +104,8 @@
   .collapse-description, 
   .collapse-equipements, 
   .collapse-content ul { 
-    width: 582px;
+    width: 100%;
+    max-width: 1024px;
 
     @media screen and (max-width: 768px) {
       width: 100%;
