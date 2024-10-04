@@ -80,7 +80,7 @@
     .collapse-title {
       width: 100%;
       max-width: 1024px;
-      border-radius: 10px;
+      border-radius: $br-medium;
     }
     // Version mobile
     @media screen and (max-width: 768px) {
@@ -93,7 +93,7 @@
 
       .collapse-title {
         width: 100%;
-        border-radius: 5px;
+        border-radius: $br-small;
       }
     }
   }
