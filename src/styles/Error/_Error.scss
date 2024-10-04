@@ -54,8 +54,9 @@
     // Version mobile
     @media screen and (max-width: 768px) {
       .error_number {
+        margin-top: 20px;
         font: {
-          font-weight: $font-weight-secondary;
+          weight: $font-weight-secondary;
           size: 96px;
         }      
       }
@@ -65,6 +66,7 @@
       }
       .error_link_home {
         font-size: $size-4;
+        margin-bottom: 20px;
       }
     }
   }
