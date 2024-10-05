@@ -53,6 +53,7 @@
 
     // Version mobile
     @media screen and (max-width: 768px) {
+      min-height: 425px;
       .error_number {
         margin-top: 20px;
         font: {

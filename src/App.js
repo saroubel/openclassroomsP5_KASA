@@ -24,3 +24,9 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+//hashrouter : permet de changer d'url compatible avec deploy sur github
