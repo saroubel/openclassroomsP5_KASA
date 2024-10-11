@@ -11,3 +11,8 @@ function Banner ({ image, texte }) {
 }
 
 export default Banner;
+
+
+// Utilisation des props image et texte pour intégrer dans n'importe quelle page de l'app
+// La prop image spécifie l'URL de l'image à afficher
+// La prop texte définit le contenu textuel qui apparaîtra sur la bannière

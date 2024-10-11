@@ -1,10 +1,7 @@
 import React from "react";
 import { useState } from "react";
-// import Font Awesome pour collapse	
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-// npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
-
 
 function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false); //par défaut la collapse est fermée
@@ -13,7 +10,6 @@ function Collapse({ title, content }) {
     const display = () => {
         setIsOpen(!isOpen);
     }
-
     //contenu de la collapse
     return (
         <div className="collapse">
@@ -34,8 +30,14 @@ function Collapse({ title, content }) {
                 <p>{content}</p>
                 </div>}
         </div>
-    );
+    )
 }
 
-
 export default Collapse; 
+
+
+// Composant Collapse utilise useState pour gérer son état ouvert/fermé
+// La prop isOpen est initialise avec false pour afficher le contenu de la collapse par défaut pour qu'il soit fermé
+// La fonction display pour afficher le contenu de la collapse en cas de clic sur le titre
+// Intègre des icônes FontAwesome pour indiquer visuellement l'état de la collapse (ouverte/fermée)
+    // npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome

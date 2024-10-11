@@ -22,3 +22,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+//Utilisation du hook "useLocation" pour définir sur quelle page on se trouve et appliquer la classe correspondante.

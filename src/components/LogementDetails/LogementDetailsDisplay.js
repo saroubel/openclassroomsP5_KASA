@@ -16,39 +16,31 @@ function LogementDetailsDisplay({id}) {
     if (!logement) {
         return <Navigate to="/error" replace />
     }
-
     //Affichage des logements
     return (
         <div>
                 <Fragment>
-                    {/**Carrousel**/}
                     <Carrousel pictures={logement.pictures} />
-
-                    {/**Details**/}
+                    {/**Détails**/}
                     <div className="logement-details">
                         <div className="logement-details-location">
-                            {/**Titre**/}
-                             <h2 className="title-logement">{logement.title}</h2>
-                            {/**Location**/}
+                            <h2 className="title-logement">{logement.title}</h2>
                             <p className="location">{logement.location}</p>
-                            {/**Tags**/}
                             <Tags listTags={logement.tags} />
                         </div>
+
                         <div className="logement-details-host">
-                            {/**Host**/}
                             <Host host={logement.host} />
-                            {/**Rating**/}
                             <Rating rating={logement.rating} />
                         </div>
                     </div>
 
                     {/**Collapse**/}
                     <div className="collapse-logement">
-                        {/**Description**/}
                         <div className="collapse-description">
                         <Collapse title="Description" content={logement.description} />
                         </div>
-                        {/**Equipements**/}
+
                         <div className="collapse-equipements">
                         <Collapse title="Equipements" 
                                   content={
@@ -65,6 +57,10 @@ function LogementDetailsDisplay({id}) {
     );
 }
 
-
-
 export default LogementDetailsDisplay;
+
+
+//Ce composant affiche les détails d'un logement en vérifiant qu'il existe par l'ID
+//Si logement n'existe pas on redirige vers page d'erreur
+//Si logement existe on affiche les sous-composants 
+//Pour présenter les info du logement, on utilise les données du fichier JSON

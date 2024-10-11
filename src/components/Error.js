@@ -13,3 +13,10 @@ const ErrorContent = () => {
 };
 
 export default ErrorContent;
+
+
+
+// Ce composant affiche le contenu de la page d'erreur 404
+// si l'url n'est pas parmis les routes de App.js
+// si logement inexistant 
+// Le composant Link redirige vers la page d'accueil

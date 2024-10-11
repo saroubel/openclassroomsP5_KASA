@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link} from "react-router-dom"; 
 
 function Card({image, title, id}) {
     return (
@@ -11,3 +11,9 @@ function Card({image, title, id}) {
 }
 
 export default Card;
+
+
+
+// Composant Card utilisé dans la Gallery pour afficher chaque logement
+// Il utilise React Router (Link) pour créer un lien cliquable vers la page détaillée du logement, en utilisant l'ID unique
+// Il affiche une image et un titre du logement reçus comme props de Gallery

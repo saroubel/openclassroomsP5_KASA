@@ -1,13 +1,12 @@
 import React from 'react'; 
+import "./styles/App.scss";
+//importer les composants pour afficher des différentes pages
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 //importer les pages
 import Home from "./pages/Home"; 
 import About from "./pages/About";
 import Error from "./pages/ErrorPage";
 import LogementPage from "./pages/LogementPage";
-//importer les composants pour afficher des différentes pages
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
-// importer le style SASS
-import "./styles/App.scss";
 
 function App() {
   return (
@@ -16,8 +15,8 @@ function App() {
         <Route path="/" element={<Navigate replace to="/accueil" />} />
         <Route path="/accueil" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/logement/:id" element={<LogementPage/>} />  {/* Affiche page erreur si logement inexistant*/}
-        <Route path="*" element={<Error />} />    {/* Affiche page erreur si l'url n'est pas dans les routes déclarées*/}
+        <Route path="/logement/:id" element={<LogementPage/>} />    
+        <Route path="*" element={<Error />} />                      
       </Routes>
     </HashRouter>
   );
@@ -26,7 +25,7 @@ function App() {
 export default App;
 
 
-
-
-
-//hashrouter : permet de changer d'url compatible avec deploy sur github
+// Fichier App.js pour le configuration des routes et la structure de base de l'application
+// Page erreur si logement inexistant
+// Page erreur si l'url n'est pas dans les routes déclarées
+// hashrouter : permet de changer d'url compatible avec deploy sur github

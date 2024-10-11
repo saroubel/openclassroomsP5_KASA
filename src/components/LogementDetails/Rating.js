@@ -1,6 +1,5 @@
 import React from "react";
-// les icones de Font Awesome pour les etoiles
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; //icone de FontAwesome pour les étoiles
 import { faStar} from "@fortawesome/free-solid-svg-icons"; //une étoile remplie
 
 
@@ -9,8 +8,7 @@ function Rating({rating}) {
 
     return (
         <div className="rating">
-            {/*Afficher les etoiles suivant la note*/}
-            {/*Si note est inferieur ou égale Rating, affiche étoile remplie, sinon vide */}
+            
             {notes.map((note) => ( 
                 note<=rating ?
                 <FontAwesomeIcon 
@@ -28,6 +26,9 @@ function Rating({rating}) {
     );
 }
 
-
 export default Rating;
 
+
+// Ce composant reçoit une prop rating qui est une note entre 1 et 5 pour générer les étoiles
+// Map affiche les étoiles suivant la note
+// Si note est inferieur ou égale Rating, affiche étoile remplie, sinon vide
